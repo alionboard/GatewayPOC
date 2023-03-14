@@ -12,6 +12,16 @@
         "Host": "localhost",
         "Port": 44333
       }]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/v{ver:apiVersion}/webSettings/{appId}",
+      "UpstreamHttpMethod": ["Get"],
+      "DownstreamPathTemplate": "/v{ver:apiVersion}/webSettings/{appId}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [{
+        "Host": "localhost",
+        "Port": 7227
+      }]
     }
   ]
 }
