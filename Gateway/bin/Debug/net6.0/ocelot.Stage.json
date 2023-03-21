@@ -1,0 +1,17 @@
+﻿{
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:44314"
+  },
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/gateway/v{ver:apiVersion}/webSettings/{appId}",
+      "UpstreamHttpMethod": ["Get"],
+      "DownstreamPathTemplate": "/v{ver:apiVersion}/webSettings/{appId}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [{
+        "Host": "localhost",
+        "Port": 7227
+      }]
+    }
+  ]
+}
